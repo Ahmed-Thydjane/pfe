@@ -1,0 +1,62 @@
+
+
+<h1>WELCOME</h1>
+
+  <mat-stepper [linear]="isLinear" #stepper>
+
+    <mat-step [stepControl]="FormGroup_name">
+      <form [formGroup]="FormGroup_name">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="resp" required>
+        </mat-form-field>
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperPrevious>Back</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="FormGroup_education">
+        <form [formGroup]="FormGroup_education">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>How much education have you completed?</ng-template> 
+            
+              <td> 
+                <mat-radio-button value="1">1</mat-radio-button>
+                <mat-radio-button value="2">2</mat-radio-button>
+                <mat-radio-button value="3">3</mat-radio-button>
+                <mat-radio-button value="4">4</mat-radio-button>
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button>Go to next step</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  
