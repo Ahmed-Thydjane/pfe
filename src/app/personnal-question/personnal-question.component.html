@@ -1,6 +1,9 @@
 
+<div id="container">
+   
+<h1>WELCOME IA  AND STRESS MONNITORING IN ELDERY</h1>
 
-<h1>WELCOME</h1>
+<h2>PERSONNAL INFORMATION</h2>
 
   <mat-stepper [linear]="isLinear" #stepper>
 
@@ -28,13 +31,18 @@
           <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
             <table>
   
-                <ng-template matStepLabel>How much education have you completed?</ng-template> 
+                <ng-template matStepLabel>Education</ng-template> 
             
               <td> 
-                <mat-radio-button value="1">1</mat-radio-button>
-                <mat-radio-button value="2">2</mat-radio-button>
-                <mat-radio-button value="3">3</mat-radio-button>
-                <mat-radio-button value="4">4</mat-radio-button>
+                <h4>How much education have you completed?</h4>
+
+                <mat-radio-button value="1">Less than high school</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">High school</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">University degree</mat-radio-button>
+                <br>
+                <mat-radio-button value="4">Graduate degree</mat-radio-button>
     
               </td>
   
@@ -50,13 +58,473 @@
       </mat-step>
 
 
+      <mat-step [stepControl]="FormGroup_urban">
+        <form [formGroup]="FormGroup_urban">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Urban</ng-template> 
+            
+              <td> 
+                <h4>What type of area did you live when you were a child?</h4>
+                
+                <mat-radio-button value="1">Rural(country side)</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Subrural</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">Urban(town,City)</mat-radio-button>
+                <br>
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+      <mat-step [stepControl]="FormGroup_age">
+        <form [formGroup]="FormGroup_age">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Age</ng-template> 
+            
+              <td> 
+                <h4>How many years old are you?</h4>
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>Age</mat-label>
+                    <input matInput placeholder="" formControlName="resp" required>
+                  </mat-form-field>
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+      <mat-step [stepControl]="FormGroup_hand">
+        <form [formGroup]="FormGroup_hand">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Hand</ng-template> 
+            
+              <td> 
+                <h4>What hand do you use to write with?</h4>
+                
+                <mat-radio-button value="1">Right</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Left</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">Both</mat-radio-button>
+                <br>
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+
+      <mat-step [stepControl]="FormGroup_gender">
+        <form [formGroup]="FormGroup_gender">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Gender</ng-template> 
+            
+              <td> 
+                <h4>What is your gender?</h4>
+                
+                <mat-radio-button value="1">Male</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Female</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">Others</mat-radio-button>
+                <br>
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+
+
+      <mat-step [stepControl]="FormGroup_engnat">
+        <form [formGroup]="FormGroup_engnat">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Engnat</ng-template> 
+            
+              <td> 
+                <h4>Is English your native language?</h4>
+                
+                <mat-radio-button value="1">Yes</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">No</mat-radio-button>
+                <br>
+                
+               
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+
+      <mat-step [stepControl]="FormGroup_religion">
+        <form [formGroup]="FormGroup_religion">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Religion</ng-template> 
+            
+              <td> 
+                <h4>What is your religion?</h4>
+                
+                <mat-radio-button value="1">Agnostic</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Atheist</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">Buddhis</mat-radio-button>
+                <br>
+                <mat-radio-button value="4">Christian (Catholic)</mat-radio-button>
+                <br>
+                <mat-radio-button value="5">Christian (Mormon)</mat-radio-button>
+                <br>
+                <mat-radio-button value="6">Christian (Protestant)</mat-radio-button>
+                <br>
+                <mat-radio-button value="7">Christian (Other)</mat-radio-button>
+                <br>
+                <mat-radio-button value="8">Hindu</mat-radio-button>
+                <br>
+                <mat-radio-button value="9">Jewish</mat-radio-button>
+                <br>
+                <mat-radio-button value="10">Muslim</mat-radio-button>
+                <br>
+                <mat-radio-button value="11">Sikh</mat-radio-button>
+                <br>
+                <mat-radio-button value="12">Other</mat-radio-button>
+               
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+      <mat-step [stepControl]="FormGroup_orientation">
+        <form [formGroup]="FormGroup_orientation">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>orientation</ng-template> 
+            
+              <td> 
+                <h4>What is your sexual orientation?</h4>
+                
+                <mat-radio-button value="1">Heterosexual</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Bisexual</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">Homosexual</mat-radio-button>
+                <br>
+                <mat-radio-button value="4">Bisexual</mat-radio-button>
+                <br>
+                <mat-radio-button value="5">Other</mat-radio-button>
+                
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+      <mat-step [stepControl]="FormGroup_race">
+        <form [formGroup]="FormGroup_race">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Race</ng-template> 
+            
+              <td> 
+                <h4>What is your race?</h4>
+                
+                <mat-radio-button value="10">Asian</mat-radio-button>
+                <br>
+                <mat-radio-button value="2O">Arab</mat-radio-button>
+                <br>
+                <mat-radio-button value="30">Black</mat-radio-button>
+                <br>
+                <mat-radio-button value="40">Indigenous Australian</mat-radio-button>
+                *<br>
+                <mat-radio-button value="50">Native American</mat-radio-button>
+                <br>
+                <mat-radio-button value="60">White</mat-radio-button>
+                <br>
+                <mat-radio-button value="70">Other</mat-radio-button>
+                
+    
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+      <mat-step [stepControl]="FormGroup_voted">
+        <form [formGroup]="FormGroup_voted">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Voted</ng-template> 
+            
+              <td> 
+                <h4>Have you voted in a national election in the past year?</h4>
+                
+                <mat-radio-button value="1">Yes</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">No</mat-radio-button>
+              </td>
+  
+            </table>
+          </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+      <mat-step [stepControl]="FormGroup_married">
+        <form [formGroup]="FormGroup_married">
+
+  
+          <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+            <table>
+  
+                <ng-template matStepLabel>Married</ng-template> 
+            
+              <td> 
+                <h4>What is your marital status?</h4>
+                
+                <mat-radio-button value="1">Never married</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Currently married</mat-radio-button>
+                <br>
+                <mat-radio-button value="3">Previously married</mat-radio-button>
+              </td>
+  
+            </table>
+          </mat-radio-group>
+
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+        </mat-step>
+
+
+
+          <mat-step [stepControl]="FormGroup_familySize">
+            <form [formGroup]="FormGroup_married">
+    
+      
+              <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+                <table>
+      
+                    <ng-template matStepLabel>Familysize</ng-template> 
+                
+                  <td> 
+                    <h4>Including you, how many children did your mother have?</h4>
+                    
+                    <mat-form-field appearance="fill">
+                        <mat-label>familysize</mat-label>
+                        <input matInput placeholder="Put your familysize" formControlName="resp" required>
+                      </mat-form-field>
+                  </td>
+      
+                </table>
+              </mat-radio-group>
+              <div>
+                <button mat-button matStepperNext>Next</button>
+                <button mat-button matStepperPrevious>Back</button>
+              </div>
+            </form>
+        </mat-step>
+
+
+
+
+              <mat-step [stepControl]="FormGroup_major">
+                <form [formGroup]="FormGroup_major">
+        
+          
+                  <mat-radio-group aria-label="Select an option" formControlName="resp" class="demo-radio-button">
+                    <table>
+          
+                        <ng-template matStepLabel>Major</ng-template> 
+                    
+                      <td> 
+                        <h4>If you attended a university, what was your major (e.g. "psychology", "English", "civil engineering")?</h4>
+                        
+                        <mat-form-field appearance="fill">
+                            <mat-label>Major</mat-label>
+                            <input matInput placeholder="" formControlName="resp" required>
+                          </mat-form-field>
+                      </td>
+          
+                    </table>
+                  </mat-radio-group>
+  
+  
+          <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+      
+
+
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
       <p>You are now done.</p>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button>Go to next step</button>
+        <button mat-button click routerLink="/questions">Go to next step</button>
       </div>
     </mat-step>
   </mat-stepper>
+
+</div>
   
