@@ -91,4 +91,8 @@ export class PersonnalQuestionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  storeinfo(){
+    
+  }
+
 }

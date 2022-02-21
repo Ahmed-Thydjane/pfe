@@ -15,6 +15,7 @@ import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatRadioButton, MatRadioModule} from "@angular/material/radio";
 import { PersonnalQuestionComponent } from './personnal-question/personnal-question.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PersonnalQuestionComponent } from './personnal-question/personnal-quest
     MatInputModule,
     BrowserAnimationsModule,
     MatRadioModule,
+    HttpClientModule
 
   ],
   providers: [],

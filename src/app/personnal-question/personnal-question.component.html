@@ -521,7 +521,7 @@
       <p>You are now done.</p>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button click routerLink="/questions">Go to next step</button>
+        <button mat-button click routerLink="/questions" (click)="storeinfo()">Go to next step</button>
       </div>
     </mat-step>
   </mat-stepper>
