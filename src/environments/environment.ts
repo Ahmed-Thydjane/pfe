@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  debutUrl: ''
+  debutUrl: 'localhost:8080/:'
 };
 
 /*
